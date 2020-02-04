@@ -1,0 +1,16 @@
+{
+  "name": "challenge-calvino-juan",
+  "version": "1.0.0",
+  "author": "juansecalvinio",
+  "license": "ISC",
+  "scripts": {
+    "install:client": "cd *-app && npm install",
+    "install:server": "cd *-api && npm install",
+    "client": "cd *-app && npm run start",
+    "server": "cd *-api && npm run start",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
